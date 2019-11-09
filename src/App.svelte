@@ -1,7 +1,6 @@
 <script>
 	export let name;
-	// @ts-ignore
-	import Draggable from 'draggable';
+	import Draggable from '@shopify/draggable';
 
 let dropzones = document.querySelectorAll('.dropzone');
  
@@ -13,6 +12,7 @@ let droppable = new Draggable.Droppable(
     mirror:    { constrainDimensions: true }
   }
 );
+console.table(droppable);
 </script>
 
 <style>
