@@ -1,18 +1,21 @@
 <script>
 	export let name;
 	import Draggable from '@shopify/draggable';
+   import { onMount } from 'svelte';
 
-let dropzones = document.querySelectorAll('.dropzone');
- 
-let droppable = new Draggable.Droppable(
-  dropzones,
-  {
-    draggable: '.draggable',
-    dropzone:  '.dropzone',
-    mirror:    { constrainDimensions: true }
-  }
-);
-console.table(droppable);
+   onMount(() => {
+      let dropzones = document.querySelectorAll('.dropzone');
+
+      let droppable = new Draggable.Droppable(
+        dropzones,
+        {
+          draggable: '.draggable',
+          dropzone:  '.dropzone',
+          mirror:    { constrainDimensions: true }
+        }
+      );
+      console.table(droppable);
+   });
 </script>
 
 <style>
